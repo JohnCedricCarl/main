@@ -1,0 +1,209 @@
+@import 'activeadmin_addons/all';
+// Sass variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// app/assets/stylesheets/active_admin/mixins/_variables.scss in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+// Overriding any non-variable Sass must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left;
+  }
+  
+  .card-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #007bff;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card-body {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .card-body ul {
+    padding-left: 15px;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .card-body li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .card-body .text-muted {
+    font-size: 0.85rem;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529;
+  }
+  
+  .bg-weekend {
+    background-color: #f0f0f0 !important;
+  }
+  
+  .list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .text-muted {
+    font-size: 0.85rem;
+  }
+  
+  .day {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+  }
+  
+  .calendar-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+
+  /* General Table Styling */
+#index_table_orders {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333; 
+    border-radius: 8px;       
+    box-shadow: 0 8px 16px rgba(0, 1, 1, 0.5);  
+    margin: 20px 0;         
+    padding: 15px;           
+  }
+ 
+/* Table Header Styling */
+#index_table_orders th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+  cursor: pointer;
+}
+
+table.index_table th {
+    background-image: linear-gradient(180deg, #e3f3fb, #e3f3fb);  // Light blue color for both start and end
+}
+
+table.index_table th.sorted-asc, table.index_table th.sorted-desc {
+  background-color: #bbe4f8;
+  background-image: linear-gradient(180deg, #bbe4f8, #bbe4f8);
+}
+ 
+/* Table Row Stripes */
+#index_table_orders tbody tr:nth-child(odd) {
+  background-color: #fdfaf3;
+}
+
+#index_table_orders td.col-selectable {
+  background-color: #e3f3fb;  /* Light red background for the header */
+  color: #333;  /* Text color for readability */
+}
+
+/* Padding for Cells */
+#index_table_orders td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+ 
+/* Center Align Numeric/Date Columns */
+.index_table td.col-id,
+.index_table td.col-jo_number,
+.index_table td.col-created_at,
+.index_table td.col-updated_at,
+.index_table td.col-first_fitting,
+.index_table td.col-second_fitting,
+.index_table td.col-third_fitting,
+.index_table td.col-fourth_fitting,
+.index_table td.col-finish {
+  text-align: center;
+}
+ 
+/* Styling for Action Links */
+.table_actions a {
+  color: #007bff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+ 
+/* Hover effect for the links */
+.table_actions a:hover {
+  background-color: #f0f0f0;
+  text-decoration: underline;
+}
+ 
+/* Specific Styles for each action */
+.table_actions .view_link {
+  color: #2980b9; /* Blue color for View */
+}
+ 
+.table_actions .edit_link {
+  color: #f39c12; /* Orange color for Edit */
+}
+ 
+.table_actions .delete_link {
+  color: #e74c3c; /* Red color for Delete */
+}
+ 
+.table_actions .delete_link:hover {
+  background-color: #f9d6d5;
+}
+
+//Background of the table
+form#collection_selection {
+  background-color: #e3f2fd;  /* Light blue background */
+  padding: 20px;
+  border: 1px solid #90caf9;  /* Blue border */
+  border-radius: 5px;
+}
+
+
+.dashboard-statistics {
+  h3 {
+    margin-bottom: 10px;
+  }
+}
